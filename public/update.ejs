@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <form action="/updateData" method="post">
+        <input id="usnames"  type="text" name="name" placeholder="Enter your name" value = "<%= obj.name %>"><br><br>
+        <input id="ussurname"  type="text" name="surname" placeholder="Enter your surname" value = "<%= obj.surname %>"><br><br>
+        <input id="usmail"  type="email" name="email" placeholder="Enter your email" value = "<%= obj.email %>"><br><br>
+        <input id="usname"  type="text" name="login" placeholder="Enter Your login" value = "<%= obj.login %>"><br><br>
+        <input id="usepass" type="password" name="pass" placeholder="Enter your password" value = "<%= obj.pass%>"><br><br>
+        <input id="usphone"  type="number" name="phone" placeholder="Enter your phone" value = "<%= obj.phone %>"><br><br>
+        <input  type="hidden" name="id"   value = "<%= obj._id %>"><br><br>
+        <input type="submit" value="Send" onclick="f1()" >
+    <!-- </form> -->
+
+    </form>
+</body>
+</html>

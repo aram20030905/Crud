@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
 
-        <ul>
-            <% mascots.forEach(function(justOne) { %>
-            <li>
-            Id - <strong><%= justOne.theaterId %></strong> <br>
-            City - <strong><%= justOne.location.address.city %></strong> /
-            State - <strong><%= justOne.location.address.state %></strong> /
-            Zip code - <strong><%= justOne.location.address.zipcode %></strong> /
-            Street - <strong><%= justOne.location.address.street1 %></strong> <br> <br>
-            </li>
-            <% }); %>
-            </ul>
+    <table border="1px">
+        <tr >
+            <td>Name</td>
+            <td>email</td>
+            <td>Login</td>
+            <td>surname</td>
+            <td>pass</td>
+            <td>phone</td>
+            <td >update</td>
+            <td >delate</td>
+        </tr>
+         <% mascots.forEach(function(justOne) { %>
+        <tr>
+            <td><%= justOne.name %></td>
+            <td><%= justOne.email %></td>
+            <td><%= justOne.login %></td>
+            <td><%= justOne.surname %></td>
+            <td><%= justOne.pass %></td>
+            <td><%= justOne.phone %></td>
+            <td><a class="update" href="update/<%= justOne._id %>">Update</a></td>
+            <td><a class="delete" href="delete/<%= justOne._id %>" >Delete</a></td>
+        </tr>
+    <% }); %>
+    </table>
+
 <!-- <form action="/addInfo" method="post"> -->
+    <div class="div1">
+    <input id="usnames"  type="text" name="name" placeholder="Enter your name"><br><br>
+    <input id="ussurname"  type="text" name="surname" placeholder="Enter your surname"><br><br>
+    <input id="usmail"  type="email" name="email" placeholder="Enter your email"><br><br>
     <input id="usname"  type="text" name="login" placeholder="Enter Your login"><br><br>
     <input id="usepass" type="password" name="pass" placeholder="Enter your password"><br><br>
-    <input id="usmail"  type="email" name="email" placeholder="Enter your email"><br><br>
-    
+    <input id="usphone"  type="number" name="phone" placeholder="Enter your phone"><br><br>
+
     <input type="submit" value="Send" onclick="f1()" >
 <!-- </form> -->
 
 
 <script src="script.js"></script>
+</div>
 
 </body>
 </html>

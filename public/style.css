@@ -1,0 +1,16 @@
+.update{
+    background-color: red;
+   text-decoration: none;
+    border-radius:5px;
+}
+.delete{
+    background-color:green;
+    text-decoration: none;
+    border-radius:5px;
+}
+.div1{
+    width:1000px;
+    margin-top:1%;
+    display:flex;
+    justify-content:space-between ;
+}

@@ -7,17 +7,21 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>CRUD project</h1>
+    <hr>
+    <h2>CRUD database</h2>
+    <hr>
 
     <table border="1px">
         <tr >
-            <td>Name</td>
-            <td>email</td>
-            <td>Login</td>
-            <td>surname</td>
-            <td>pass</td>
-            <td>phone</td>
-            <td >update</td>
-            <td >delate</td>
+            <td class="ss">name</td>
+            <td class="ss">email</td>
+            <td class="ss">Login</td>
+            <td class="ss">surname</td>
+            <td class="ss">pass</td>
+            <td class="ss">phone</td>
+            <td class="ss">update</td>
+            <td class="ss">delate</td>
         </tr>
          <% mascots.forEach(function(justOne) { %>
         <tr>
@@ -32,7 +36,8 @@
         </tr>
     <% }); %>
     </table>
-
+<h2>Add Information</h2>
+<hr>
 <!-- <form action="/addInfo" method="post"> -->
     <div class="div1">
     <input id="usnames"  type="text" name="name" placeholder="Enter your name"><br><br>
@@ -42,7 +47,7 @@
     <input id="usepass" type="password" name="pass" placeholder="Enter your password"><br><br>
     <input id="usphone"  type="number" name="phone" placeholder="Enter your phone"><br><br>
 
-    <input type="submit" value="Send" onclick="f1()" >
+    <input id="but" type="submit" value="Send" onclick="f1()" >
 <!-- </form> -->
 
 
